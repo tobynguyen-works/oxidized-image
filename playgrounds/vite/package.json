@@ -1,0 +1,16 @@
+{
+	"name": "vite-playground",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"@napi-rs/image": "catalog:dev",
+		"@oxidized-image/vite": "workspace:*"
+	},
+	"devDependencies": {
+		"vite": "catalog:build",
+		"vite-plus": "catalog:build"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

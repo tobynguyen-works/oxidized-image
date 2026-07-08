@@ -1,0 +1,59 @@
+{
+	"name": "@oxidized-image/vite",
+	"version": "1.0.0",
+	"description": "A Vite plugin for optimizing images.",
+	"keywords": [
+		"image",
+		"vite",
+		"vite-plugin"
+	],
+	"homepage": "https://github.com/tobynguyen-works/oxidized-image#readme",
+	"bugs": {
+		"url": "https://github.com/tobynguyen-works/oxidized-image/issues"
+	},
+	"license": "MIT",
+	"author": "Toby Nguyen <hi@tobynguyen.net>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tobynguyen-works/oxidized-image.git"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"test": "vp test",
+		"prepublishOnly": "vp run build"
+	},
+	"dependencies": {
+		"effect": "catalog:prod",
+		"mlly": "catalog:dev",
+		"ohash": "catalog:prod",
+		"pathe": "catalog:prod",
+		"picocolors": "catalog:prod",
+		"pretty-bytes": "catalog:prod",
+		"unstorage": "catalog:prod"
+	},
+	"devDependencies": {
+		"@effect/language-service": "catalog:types",
+		"@types/node": "catalog:types",
+		"@typescript/native-preview": "catalog:types",
+		"typescript": "catalog:types",
+		"vite-plus": "catalog:build"
+	},
+	"peerDependencies": {
+		"@napi-rs/image": "catalog:dev",
+		"vite": "catalog:build"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

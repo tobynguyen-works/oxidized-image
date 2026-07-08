@@ -1,0 +1,71 @@
+---
+title: Astro
+description: Install and configure Oxidized Image in an Astro project
+---
+
+## Installation
+
+Install the integration using your preferred package manager:
+
+```bash
+npm install @oxidized-image/astro
+```
+
+```bash
+pnpm add @oxidized-image/astro
+```
+
+```bash
+yarn add @oxidized-image/astro
+```
+
+## Setup
+
+Add the integration to your `astro.config.ts`:
+
+```ts
+import { defineConfig } from 'astro/config';
+import oxidizedImage from '@oxidized-image/astro';
+
+export default defineConfig({
+	integrations: [oxidizedImage()],
+});
+```
+
+This replaces Astro's default Sharp-based image service with the Oxidized Image service, which uses a Rust-based engine via [@napi-rs/image](https://image.napi.rs/) for faster encoding.
+
+## Configuration
+
+You can customize compression options per format by passing a config object:
+
+```ts
+oxidizedImage({
+	jpeg: {
+		quality: 80,
+	},
+	png: {
+		compressionType: 'best',
+	},
+	webp: {
+		quality: 80,
+	},
+	avif: {
+		quality: 100,
+		alphaQuality: 100,
+		speed: 4,
+	},
+});
+```
+
+### Options
+
+| Option                | Type              | Default    | Description                                             |
+| --------------------- | ----------------- | ---------- | ------------------------------------------------------- |
+| `jpeg.quality`        | `number`          | `80`       | JPEG quality (1–100)                                    |
+| `png.compressionType` | `CompressionType` | `Best`     | PNG compression level                                   |
+| `png.filterType`      | `FilterType`      | `Adaptive` | PNG filter type                                         |
+| `webp.quality`        | `number`          | `80`       | WebP quality (1–100)                                    |
+| `avif.quality`        | `number`          | `100`      | AVIF quality (1–100)                                    |
+| `avif.alphaQuality`   | `number`          | `100`      | AVIF alpha channel quality (1–100)                      |
+| `avif.speed`          | `number`          | `4`        | AVIF encoding speed (1–10, lower is slower but smaller) |
+| `avif.threads`        | `number`          | `0`        | Number of threads (0 = auto)                            |

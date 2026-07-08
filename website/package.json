@@ -1,0 +1,35 @@
+{
+	"name": "@oxidized-image/website",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"sideEffects": false,
+	"scripts": {
+		"dev": "waku dev",
+		"build": "waku build",
+		"types:check": "fumadocs-mdx && tsc --noEmit"
+	},
+	"dependencies": {
+		"fumadocs-core": "catalog:frontend",
+		"fumadocs-mdx": "catalog:frontend",
+		"fumadocs-ui": "catalog:frontend",
+		"fumapress": "catalog:frontend",
+		"lucide-react": "catalog:frontend",
+		"react": "catalog:frontend",
+		"react-dom": "catalog:frontend",
+		"react-server-dom-webpack": "catalog:frontend",
+		"waku": "catalog:frontend"
+	},
+	"devDependencies": {
+		"@tailwindcss/vite": "catalog:build",
+		"@types/mdx": "catalog:types",
+		"@types/node": "catalog:types",
+		"@types/react": "catalog:types",
+		"@types/react-dom": "catalog:types",
+		"tailwindcss": "catalog:build",
+		"typescript": "catalog:types"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

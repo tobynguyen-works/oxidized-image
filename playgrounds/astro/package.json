@@ -1,0 +1,15 @@
+{
+	"name": "astro-playground",
+	"version": "0.0.0",
+	"type": "module",
+	"dependencies": {
+		"astro": "catalog:dev"
+	},
+	"devDependencies": {
+		"@napi-rs/image": "catalog:dev",
+		"@oxidized-image/astro": "workspace:*"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

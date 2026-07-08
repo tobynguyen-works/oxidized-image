@@ -1,0 +1,7 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"buildCommand": "pnpm --filter @oxidized-image/website build",
+	"installCommand": "pnpm install",
+	"outputDirectory": "website/dist",
+	"framework": null
+}

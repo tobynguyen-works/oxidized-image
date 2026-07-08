@@ -1,0 +1,30 @@
+---
+icon: Scale
+title: Comparisons
+description: How Oxidized Image compares to other image optimization solutions
+---
+
+## Sharp
+
+Oxidized Image uses [@napi-rs/image](https://image.napi.rs/) as its underlying image processing engine — a Rust-based library offering high-performance image encoding and transformation. The following benchmarks compare its performance against [Sharp](https://sharp.pixelplumbing.com/), the most widely-used Node.js image processing library.
+
+<Callout>
+	For the full benchmark methodology and source code, see the [@napi-rs/image
+	repository](https://github.com/Brooooooklyn/Image).
+</Callout>
+
+### Benchmark Results
+
+| Configuration                         | Format   | NAPI Image Performance | Sharp Performance | NAPI Speedup |
+| :------------------------------------ | :------- | :--------------------- | :---------------- | :----------- |
+| **DEFAULT** _(baseline)_              | **WEBP** | 202 ops/s              | 169 ops/s         | 1.20x        |
+| **DEFAULT** _(baseline)_              | **AVIF** | 26 ops/s               | 24 ops/s          | 1.08x        |
+| **UV_THREADPOOL_SIZE=10** _(fastest)_ | **WEBP** | 431 ops/s              | 238 ops/s         | 1.81x        |
+| **UV_THREADPOOL_SIZE=10** _(fastest)_ | **AVIF** | 36 ops/s               | 32 ops/s          | 1.13x        |
+
+### Key Takeaways
+
+- **Peak Speedup:** Up to **1.8x** faster than Sharp at WebP encoding.
+- **WebP:** The performance advantage is most pronounced with WebP, particularly when increasing the thread pool size via `UV_THREADPOOL_SIZE=10`.
+- **AVIF:** Both libraries perform at near-parity for AVIF encoding, with a modest improvement under default conditions.
+- **Test Environment:** Apple M1 Max · macOS 12.3.1 · Node.js (`node bench/bench.mjs`).

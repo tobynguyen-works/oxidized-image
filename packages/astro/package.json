@@ -1,0 +1,54 @@
+{
+	"name": "@oxidized-image/astro",
+	"version": "1.0.0",
+	"description": "A blazingly-fast image service for Astro",
+	"keywords": [
+		"astro",
+		"image"
+	],
+	"homepage": "https://github.com/tobynguyen-works/oxidized-image#readme",
+	"bugs": {
+		"url": "https://github.com/tobynguyen-works/oxidized-image/issues"
+	},
+	"license": "MIT",
+	"author": "Toby Nguyen <hi@tobynguyen.net>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tobynguyen-works/oxidized-image.git"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": "./dist/index.mjs",
+		"./service": "./dist/service.mjs",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"test": "vp test",
+		"prepublishOnly": "vp run build"
+	},
+	"dependencies": {
+		"effect": "catalog:prod",
+		"image-meta": "catalog:prod"
+	},
+	"devDependencies": {
+		"@effect/language-service": "catalog:types",
+		"@types/node": "catalog:types",
+		"@typescript/native-preview": "catalog:types",
+		"typescript": "catalog:types",
+		"vite-plus": "catalog:build"
+	},
+	"peerDependencies": {
+		"@napi-rs/image": "catalog:dev",
+		"astro": "catalog:dev"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	}
+}

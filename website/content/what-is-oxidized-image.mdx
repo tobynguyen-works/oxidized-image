@@ -1,0 +1,21 @@
+---
+icon: CircleQuestionMark
+title: What is Oxidized Image?
+description: The motivation behind Oxidized Image and how it differs from existing solutions
+---
+
+## The Problem
+
+Most modern bundlers rely on [Sharp](https://sharp.pixelplumbing.com/) for image optimization — either through community plugins or, as in Astro's case, as the default built-in image service.
+
+Sharp is a capable library, but it has its performance limits — particularly under concurrent load or when encoding modern formats like WebP and AVIF at scale.
+
+## The Solution
+
+Oxidized Image was built to replace Sharp with [@napi-rs/image](https://image.napi.rs/), a Rust-based image processing engine exposed to Node.js via [NAPI-RS](https://napi.rs/). The result is faster encoding, especially for WebP, without sacrificing compatibility or ease of use.
+
+Beyond raw performance, Oxidized Image also provides a richer configuration API, giving you more control over encoding quality, format selection, and processing behavior than most existing plugins allow.
+
+## Who Is It For?
+
+Oxidized Image is designed for developers who want faster image optimization with more flexibility. Currently, first-party integrations are available for **Vite** and **Astro**, with support for additional bundlers and frameworks planned for the future. All integrations share the same underlying engine and configuration model, making it straightforward to adopt across different toolchains.

@@ -1,0 +1,71 @@
+---
+title: Vite
+description: Install and configure Oxidized Image in a Vite project
+---
+
+## Installation
+
+Install the plugin using your preferred package manager:
+
+```bash
+npm install @oxidized-image/vite
+```
+
+```bash
+pnpm add @oxidized-image/vite
+```
+
+```bash
+yarn add @oxidized-image/vite
+```
+
+## Setup
+
+Add the plugin to your `vite.config.ts`:
+
+```ts
+import { defineConfig } from 'vite';
+import OxidizedImage from '@oxidized-image/vite';
+
+export default defineConfig({
+	plugins: [OxidizedImage()],
+});
+```
+
+That's it. During `vite build`, the plugin will automatically compress all image assets (PNG, JPEG, WebP, AVIF) in the output bundle.
+
+## Configuration
+
+You can customize compression options per format by passing an options object:
+
+```ts
+OxidizedImage({
+	concurrency: 5,
+	png: {
+		algorithm: 'lossless',
+		strip: true,
+	},
+	jpeg: {
+		quality: 80,
+	},
+	webp: {
+		algorithm: 'lossy',
+		quality: 80,
+	},
+	avif: {
+		quality: 75,
+	},
+});
+```
+
+### Options
+
+| Option           | Type                    | Default      | Description                                |
+| ---------------- | ----------------------- | ------------ | ------------------------------------------ |
+| `concurrency`    | `number`                | `5`          | Number of images processed in parallel     |
+| `png.algorithm`  | `'lossless' \| 'lossy'` | `'lossless'` | PNG compression algorithm                  |
+| `png.strip`      | `boolean`               | `true`       | Strip PNG metadata                         |
+| `jpeg.quality`   | `number`                | `80`         | JPEG quality (1–100)                       |
+| `webp.algorithm` | `'lossy' \| 'lossless'` | `'lossy'`    | WebP compression algorithm                 |
+| `webp.quality`   | `number`                | `80`         | WebP quality when using lossy mode (1–100) |
+| `avif.quality`   | `number`                | `75`         | AVIF quality (1–100)                       |

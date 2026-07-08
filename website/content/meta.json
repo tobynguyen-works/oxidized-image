@@ -1,0 +1,13 @@
+{
+	"title": "Introduction",
+	"pages": [
+		"---Introduction---",
+		"index",
+		"what-is-oxidized-image",
+		"comparisons",
+		"installation",
+		"---Integrations---",
+		"vite",
+		"astro"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"name": "@oxidized-image/monorepo",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"check": "vpr check",
+		"prepare": "vp config",
+		"tegami": "node scripts/tegami.mts"
+	},
+	"devDependencies": {
+		"@typescript/native-preview": "catalog:types",
+		"oxlint-plugin-case-police": "catalog:lint",
+		"tegami": "catalog:scripts",
+		"vite": "npm:@voidzero-dev/vite-plus-core@0.2.2",
+		"vite-plus": "catalog:build"
+	},
+	"engines": {
+		"node": ">=22.18.0"
+	},
+	"packageManager": "pnpm@11.10.0"
+}
