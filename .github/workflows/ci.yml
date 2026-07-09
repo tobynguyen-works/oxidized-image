@@ -11,6 +11,7 @@ on:
 
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -22,9 +23,10 @@ jobs:
           cache: true
 
       - run: vp install
-      - run: vp check
+      - run: vpr check
 
   test:
+    name: Test
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     needs: lint
