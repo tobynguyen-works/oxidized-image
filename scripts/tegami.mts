@@ -27,6 +27,10 @@ const paper = tegami({
 	],
 	npm: {
 		client: 'pnpm',
+		trustedPublish: {
+			provider: 'github',
+			workflow: 'release.yml',
+		},
 	},
 });
 
