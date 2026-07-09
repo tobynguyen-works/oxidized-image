@@ -1,6 +1,7 @@
 import { tegami } from 'tegami';
 import { runCli } from 'tegami/cli';
 import { github } from 'tegami/plugins/github';
+import { x } from 'tinyexec';
 
 const paper = tegami({
 	plugins: [
@@ -10,8 +11,20 @@ const paper = tegami({
 				base: 'main',
 			},
 		}),
+		{
+			name: 'custom',
+			async willPublish() {
+				await x('vp', ['run', 'build'], {
+					throwOnError: true,
+				});
+			},
+			async applyCliDraft() {
+				await x('vp', ['check', '--fix'], {
+					throwOnError: true,
+				});
+			},
+		},
 	],
-	packages: {},
 	npm: {
 		client: 'pnpm',
 	},

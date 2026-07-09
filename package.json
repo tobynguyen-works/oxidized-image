@@ -12,6 +12,7 @@
 		"@typescript/native-preview": "catalog:types",
 		"oxlint-plugin-case-police": "catalog:lint",
 		"tegami": "catalog:scripts",
+		"tinyexec": "catalog:scripts",
 		"vite": "npm:@voidzero-dev/vite-plus-core@0.2.2",
 		"vite-plus": "catalog:build"
 	},

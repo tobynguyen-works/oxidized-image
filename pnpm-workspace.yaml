@@ -37,6 +37,7 @@ catalogs:
     unstorage: ^1.17.5
   scripts:
     tegami: ^1.2.2
+    tinyexec: ^1.2.4
   frontend:
     fumadocs-core: ^16.10.7
     fumadocs-mdx: ^15.0.13
