@@ -13,10 +13,14 @@ export default defineConfig({
 			},
 			test: {
 				command: 'vp run -r test',
-				dependsOn: ['build'],
+				dependsOn: ['build', 'check'],
 			},
 			play: {
 				command: 'vp run -r play',
+				dependsOn: ['build'],
+			},
+			check: {
+				command: 'vp check',
 				dependsOn: ['build'],
 			},
 		},
