@@ -26,6 +26,6 @@ jobs:
           cache: true
 
       - name: Version & publish packages
-        run: pnpm tegami ci
+        run: vpr tegami ci
         env:
           GITHUB_TOKEN: ${{ github.token }}
