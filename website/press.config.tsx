@@ -9,6 +9,7 @@ import { sitemapPlugin } from 'fumapress/plugins/sitemap';
 import { linkValidationPlugin } from 'fumapress/plugins/link-validation';
 import { Image } from 'fumapress/image';
 import { createNotebookLayoutPage } from 'fumapress/layouts/notebook';
+import { imagePlugin } from 'fumapress/plugins/image/vercel';
 
 export default defineConfig({
 	content: docs.toFumadocsSource(),
@@ -51,6 +52,9 @@ export default defineConfig({
 		takumiPlugin(),
 		sitemapPlugin(),
 		linkValidationPlugin(),
+		imagePlugin({
+			formats: ['image/webp', 'image/png'],
+		}),
 	)
 	.adapters(fumadocsMdx())
 	.layouts({
