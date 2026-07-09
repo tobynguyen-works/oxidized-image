@@ -11,6 +11,14 @@ export default defineConfig({
 			build: {
 				command: 'vp run -r build',
 			},
+			test: {
+				command: 'vp run -r test',
+				dependsOn: ['build'],
+			},
+			play: {
+				command: 'vp run -r play',
+				dependsOn: ['build'],
+			},
 		},
 	},
 	lint: {
