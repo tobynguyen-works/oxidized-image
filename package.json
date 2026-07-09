@@ -4,7 +4,6 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"check": "vpr check",
 		"prepare": "vp config",
 		"tegami": "node scripts/tegami.mts"
 	},
