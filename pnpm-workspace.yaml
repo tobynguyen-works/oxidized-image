@@ -9,7 +9,7 @@ catalogs:
   types:
     '@types/node': ^26.1.0
     '@typescript/native-preview': 7.0.0-dev.20260705.1
-    typescript: ^6.0.3
+    typescript: ^7.0.1-rc
     '@effect/language-service': ^0.86.4
     '@types/react': ^19.2.17
     '@types/react-dom': ^19.2.3
@@ -36,12 +36,12 @@ catalogs:
     pretty-bytes: ^7.1.0
     unstorage: ^1.17.5
   scripts:
-    tegami: ^1.2.2
+    tegami: ^1.2.3
     tinyexec: ^1.2.4
   frontend:
-    fumadocs-core: ^16.10.7
-    fumadocs-mdx: ^15.0.13
-    fumadocs-ui: ^16.10.7
+    fumadocs-core: ^16.11.1
+    fumadocs-mdx: ^15.1.0
+    fumadocs-ui: ^16.11.1
     fumapress: 0.6.3
     lucide-react: ^1.23.0
     react: ^19.2.7
