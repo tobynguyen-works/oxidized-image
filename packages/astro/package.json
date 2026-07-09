@@ -30,7 +30,6 @@
 		"access": "public"
 	},
 	"scripts": {
-		"test": "vp test",
 		"prepublishOnly": "vp run build"
 	},
 	"dependencies": {
