@@ -5,27 +5,22 @@ description: Install and configure Oxidized Image in an Astro project
 
 ## Installation
 
-Install the integration and its peer dependencies using your preferred package manager:
+Install the plugin and its peer dependencies using your preferred package manager:
 
-```bash
-npm install @oxidized-image/astro @napi-rs/image
+```npm
+npm install -D @oxidized-image/astro @napi-rs/image
 ```
 
-```bash
-pnpm add @oxidized-image/astro @napi-rs/image
-```
-
-```bash
-yarn add @oxidized-image/astro @napi-rs/image
-```
-
-> **Note:** `@napi-rs/image` is a required peer dependency and must be installed alongside `@oxidized-image/astro`.
+<Callout title="Important" type="warn">
+	`@napi-rs/image` is a required peer dependency and must be installed alongside
+	`@oxidized-image/astro`.
+</Callout>
 
 ## Setup
 
 Add the integration to your `astro.config.ts`:
 
-```ts
+```ts title="astro.config.ts"
 import { defineConfig } from 'astro/config';
 import oxidizedImage from '@oxidized-image/astro';
 
@@ -40,22 +35,29 @@ This replaces Astro's default Sharp-based image service with the Oxidized Image 
 
 You can customize compression options per format by passing a config object:
 
-```ts
-oxidizedImage({
-	jpeg: {
-		quality: 80,
-	},
-	png: {
-		compressionType: 'best',
-	},
-	webp: {
-		quality: 80,
-	},
-	avif: {
-		quality: 100,
-		alphaQuality: 100,
-		speed: 4,
-	},
+```ts title="astro.config.ts"
+import { defineConfig } from 'astro/config';
+import oxidizedImage from '@oxidized-image/astro';
+
+export default defineConfig({
+	integrations: [
+		oxidizedImage({
+			jpeg: {
+				quality: 80,
+			},
+			png: {
+				compressionType: 'best',
+			},
+			webp: {
+				quality: 80,
+			},
+			avif: {
+				quality: 100,
+				alphaQuality: 100,
+				speed: 4,
+			},
+		}),
+	],
 });
 ```
 

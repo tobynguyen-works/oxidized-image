@@ -7,25 +7,20 @@ description: Install and configure Oxidized Image in a Vite project
 
 Install the plugin and its peer dependencies using your preferred package manager:
 
-```bash
-npm install @oxidized-image/vite @napi-rs/image
+```npm
+npm install -D @oxidized-image/vite @napi-rs/image
 ```
 
-```bash
-pnpm add @oxidized-image/vite @napi-rs/image
-```
-
-```bash
-yarn add @oxidized-image/vite @napi-rs/image
-```
-
-> **Note:** `@napi-rs/image` is a required peer dependency and must be installed alongside `@oxidized-image/vite`.
+<Callout title="Important" type="warn">
+	`@napi-rs/image` is a required peer dependency and must be installed alongside
+	`@oxidized-image/vite`.
+</Callout>
 
 ## Setup
 
 Add the plugin to your `vite.config.ts`:
 
-```ts
+```ts title="vite.config.ts"
 import { defineConfig } from 'vite';
 import OxidizedImage from '@oxidized-image/vite';
 
@@ -40,23 +35,30 @@ That's it. During `vite build`, the plugin will automatically compress all image
 
 You can customize compression options per format by passing an options object:
 
-```ts
-OxidizedImage({
-	concurrency: 5,
-	png: {
-		algorithm: 'lossless',
-		strip: true,
-	},
-	jpeg: {
-		quality: 80,
-	},
-	webp: {
-		algorithm: 'lossy',
-		quality: 80,
-	},
-	avif: {
-		quality: 75,
-	},
+```ts title="vite.config.ts"
+import { defineConfig } from 'vite';
+import OxidizedImage from '@oxidized-image/vite';
+
+export default defineConfig({
+	plugins: [
+		OxidizedImage({
+			concurrency: 5,
+			png: {
+				algorithm: 'lossless',
+				strip: true,
+			},
+			jpeg: {
+				quality: 80,
+			},
+			webp: {
+				algorithm: 'lossy',
+				quality: 80,
+			},
+			avif: {
+				quality: 75,
+			},
+		}),
+	],
 });
 ```
 
