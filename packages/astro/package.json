@@ -4,7 +4,9 @@
 	"description": "A blazingly-fast image service for Astro",
 	"keywords": [
 		"astro",
-		"image"
+		"astro-integration",
+		"image",
+		"withastro"
 	],
 	"homepage": "https://github.com/tobynguyen-works/oxidized-image#readme",
 	"bugs": {
