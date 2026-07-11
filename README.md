@@ -35,7 +35,7 @@ See [CONTRIBUTING][contributing-guide] for guidance.
 If you are unable to contribute by code, you can still participate by:
 
 - Add a GitHub Star to the project.
-- Follow me on [X][https://x.com/iamtobynguyen] and post about this project.
+- Follow me on [X][x-url] and post about this project.
 
 ## 📖 License
 
