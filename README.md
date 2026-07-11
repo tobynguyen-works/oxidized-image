@@ -26,9 +26,26 @@
 
 Oxidized Image is a high-performance image optimization plugin for modern web frameworks, powered by [@napi-rs/image](https://image.napi.rs/).
 
+For more information, check out at our [website][website-url].
+
+## ✍️ Contribute
+
+See [CONTRIBUTING][contributing-guide] for guidance.
+
+If you are unable to contribute by code, you can still participate by:
+
+- Add a GitHub Star to the project.
+- Follow me on [X][https://x.com/iamtobynguyen] and post about this project.
+
+## 📖 License
+
+Oxidized Image is licensed under the [MIT](LICENSE) license.
+
+[contributing-guide]: https://github.com/tobynguyen27/contribute
 [website-badge]: https://img.shields.io/badge/Website-blue
 [website-url]: https://oxidized-image.tobynguyen.net
 [license-badge]: https://img.shields.io/github/license/tobynguyen-works/oxidized-image
 [license-url]: https://github.com/tobynguyen-works/oxidized-image/blob/main/LICENSE
 [ci-badge]: https://github.com/tobynguyen-works/oxidized-image/actions/workflows/ci.yml/badge.svg?event=push&branch=main
 [ci-url]: https://github.com/tobynguyen-works/oxidized-image/actions/workflows/ci.yml?query=event%3Apush+branch%3Amain
+[x-url]: https://x.com/iamtobynguyen
