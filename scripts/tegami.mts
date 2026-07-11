@@ -13,8 +13,8 @@ const paper = tegami({
 		}),
 		{
 			name: 'custom',
-			async willPublish() {
-				await x('vp', ['run', 'build'], {
+			async willPublish({ pkg }) {
+				await x('vp', ['run', '--filter', pkg.name, 'build'], {
 					throwOnError: true,
 				});
 			},
@@ -32,6 +32,7 @@ const paper = tegami({
 			workflow: 'release.yml',
 		},
 	},
+	ignore: ['@oxidized-image/website', /-playground$/],
 });
 
 await runCli(paper);
