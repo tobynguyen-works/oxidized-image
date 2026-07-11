@@ -5,6 +5,7 @@ export default defineConfig({
 		tasks: {
 			play: {
 				command: 'astro build',
+				dependsOn: [{ task: 'build', from: ['dependencies', 'devDependencies'] }],
 			},
 		},
 	},

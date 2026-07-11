@@ -1,4 +1,4 @@
-import { defineConfig, type UserConfig } from 'vite-plus';
+import { defineConfig } from 'vite-plus';
 
 export default defineConfig({
 	resolve: {

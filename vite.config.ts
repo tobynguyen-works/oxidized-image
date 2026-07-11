@@ -13,15 +13,13 @@ export default defineConfig({
 			},
 			test: {
 				command: 'vp run -r test',
-				dependsOn: ['check', { task: 'build', from: ['dependencies', 'devDependencies'] }],
 			},
 			play: {
 				command: 'vp run -r play',
-				dependsOn: [{ task: 'build', from: ['dependencies', 'devDependencies'] }],
 			},
 			check: {
 				command: 'vp check',
-				dependsOn: [{ task: 'build', from: ['dependencies', 'devDependencies'] }],
+				dependsOn: ['build'],
 			},
 		},
 	},
