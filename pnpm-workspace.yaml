@@ -16,7 +16,7 @@ catalogs:
     '@types/mdx': ^2.0.14
   build:
     vite: npm:@voidzero-dev/vite-plus-core@0.2.2
-    vite-plus: 0.2.2
+    vite-plus: 0.3.0
     '@tailwindcss/vite': ^4.3.3
     tailwindcss: ^4.3.3
   lint:
