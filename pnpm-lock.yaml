@@ -259,7 +259,7 @@ catalogs:
   prod:
     effect:
       specifier: ^3.22.1
-      version: 3.22.1
+      version: 3.22.2
     image-meta:
       specifier: ^0.2.2
       version: 0.2.2
@@ -344,7 +344,7 @@ importers:
         version: 7.3.5(@types/node@26.1.0)(jiti@2.7.0)(terser@5.48.0)(typescript@6.0.3)(yaml@2.9.0)
       effect:
         specifier: catalog:prod
-        version: 3.22.1
+        version: 3.22.2
       image-meta:
         specifier: catalog:prod
         version: 0.2.2
@@ -372,7 +372,7 @@ importers:
         version: 1.14.0
       effect:
         specifier: catalog:prod
-        version: 3.22.1
+        version: 3.22.2
       mlly:
         specifier: catalog:dev
         version: 1.8.2
@@ -3051,8 +3051,8 @@ packages:
     resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
     engines: {node: '>=4'}
 
-  effect@3.22.1:
-    resolution: {integrity: sha512-TNoXushmPOBAjJlthF5d2QwnX2xBPEtcNJr5XKNKbRLbDvBcOYkXlYDfvGfSA0zriwLFuCll5MDtNMAdZL17PQ==}
+  effect@3.22.2:
+    resolution: {integrity: sha512-fm1CQXCs7GTMwpadZxwU5rnAb2bN6mbQpknq/pXBGCzSKkosNYb9k0wsoL0TfB10rSa5xOEZJjo77u/KLXSANg==}
 
   electron-to-chromium@1.5.388:
     resolution: {integrity: sha512-Pl/aJaqOOxYxda3vcx1IKSJimwYXHDkEnGn0F+kG2EE68dDtx2uCinaS+Vih8Z91B9t8CSAbiF/HKyWcnXjhzw==}
@@ -6754,7 +6754,7 @@ snapshots:
 
   dset@3.1.4: {}
 
-  effect@3.22.1:
+  effect@3.22.2:
     dependencies:
       '@standard-schema/spec': 1.1.0
       fast-check: 3.23.2
