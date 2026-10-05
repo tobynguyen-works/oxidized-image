@@ -12,7 +12,7 @@
 		"oxlint-plugin-case-police": "catalog:lint",
 		"tegami": "catalog:scripts",
 		"tinyexec": "catalog:scripts",
-		"vite": "npm:@voidzero-dev/vite-plus-core@0.2.2",
+		"vite": "npm:@voidzero-dev/vite-plus-core@0.3.3",
 		"vite-plus": "catalog:build"
 	},
 	"engines": {
